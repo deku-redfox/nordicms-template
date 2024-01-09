@@ -2,10 +2,11 @@
 
 export default class Brand {
 
-    constructor({id = '', brandName = '', products = []}) {
+    constructor({id = '', brandName = '', brandLogo = ''}) {
         this.id = id
         this.brandName = brandName
-        this.products = products
+        this.brandLogo = brandLogo
     }
 
 }
+

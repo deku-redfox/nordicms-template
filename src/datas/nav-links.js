@@ -1,75 +1,77 @@
+import AppRoutes from "../routes"
+
 export const mainLinks = [
     {
         title: 'About NMS',
-        route: '/about-nms'
+        route: AppRoutes.about
     },
     {
         title: 'Aesthetic medicals',
-        route: '/aesthetic-medical-products'
+        route: AppRoutes.aesthetics
     },
     {
         title: 'Orthopedics',
-        route: '/orthopedic-products'
+        route: AppRoutes.orthopedics
     },
     {
         title: 'Skincare',
-        route: '/skincare-products'
+        route: AppRoutes.skincares
     },
     {
         title: 'Miscellaneous',
-        route: '/miscellaneous-products'
+        route: AppRoutes.miscellaneous
     }
 ]
 
 export const topLinks = [
     {
         title: 'Terms & Conditions', 
-        route: '#',
+        route: AppRoutes.termsAndConditions,
         subLinks: [
             {
                 title: 'Terms and Conditions of Sale', 
-                route: '/terms-and-conditions-of-sale'
+                route: AppRoutes.conditionsOfSale
             },
             {
                 title: 'Terms and Conditions of Purchase', 
-                route: '/terms-and-conditions-of-purchase'
+                route: AppRoutes.conditionsOfPurchase
             },
             {
                 title: 'Cookie & Privacy Policy', 
-                route: '/cookies-and-privacy-policy'
+                route: AppRoutes.cookies
             },
         ]
     },
     {
         title: 'Login', 
-        route: '#'
+        route: AppRoutes.login
     },
     {
         title: 'Warehouse/Logistics', 
-        route: '/warehouse-and-logistics'
+        route: AppRoutes.warehouseAndLogistics
     },
     {
         title: 'Quality/Regulatory', 
-        route: '/quality-and-regulatory'
+        route: AppRoutes.qualityAndRegulatory
     },
     {
         title: 'FAQ', 
-        route: '/faq'
+        route: AppRoutes.faq
     },
     {
         title: 'WeChat',
-        route: '#',
+        route: AppRoutes.wechat,
         extern: true,
         icon: '/wechat-menu.png'
     },
     {
         title: 'Whatsapp',
-        route: '#',
+        route: AppRoutes.whatsapp,
         extern: true,
         icon: '/whatsapp-menu.png'
     },
     {
         title: 'Contact', 
-        route: '/contact'
+        route: AppRoutes.contact
     },
 ]

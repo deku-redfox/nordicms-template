@@ -53,7 +53,7 @@ function Navlink({
 function Topbar() {
     
     return (
-        <div className="bg-primary h-[30px] xl:flex justify-end space-x-5 hidden pr-8 align-middle">
+        <div className="bg-primary h-[30px] xl:flex justify-end space-x-5 hidden pr-8 align-middle font-open-sans">
             {topLinks.map((link, index) => (
                 <NavLink key={index} to={link.route} className={({isActive}) => `${(isActive && link.route != '#') ? 'text-third' : 'text-white'} 
                     relative text-xs flex items-center ${!link.extern && 'group'}`}>

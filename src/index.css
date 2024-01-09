@@ -9,6 +9,10 @@
   font-family: 'Open Sans Rg';
   src: url('./assets/open-sans-rg.ttf');
 }
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('./assets/libre-baskerville.ttf');
+}
 
 @layer base {
 
@@ -18,16 +22,21 @@
     --color-primary-dark: #132635; /* Header 2eme barre, Liens, Titres, Nom des produits, et certains details des produits */
     --color-primary-light: #235062; /* Select Brand...*/
     --color-secondary: #e9e7e3; /* Background de certaines sections */
+    --color-secondary-light: #eaeaea;
     --color-third: #a39e98; /* Contact box et autres */
     --color-black40: rgba(0,0,0,0.4); /* top btn */
     
 
     --transition-bg: background-color .2s ease-in-out;
     --transition-opacity: opacity .2s ease-in-out;
+    --transition-border: border .2s ease-in-out;
     --transition: .2s ease-in-out;
 
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Open Sans Rg', Arial, sans-serif;
     font-weight: 600;
+    color: var(--color-primary-dark);
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
   
   }
 
@@ -42,8 +51,20 @@
     font-family: 'Libre Baskerville', serif;
   }
 
+  h2 {
+    @apply text-[20px] lg:text-[28px] font-bold tracking-wide
+  }
+
+  h3 {
+    @apply text-[19px] lg:text-[26px] font-bold tracking-wide
+  }
+
+  h4 {
+    @apply text-sm font-bold tracking-wide
+  }
+
   a {
-    transition: var(--transition-bg), var(--transition-opacity);
+    transition: var(--transition-bg), var(--transition-opacity), var(--transition-border);
   }
 
   .rollin {
@@ -70,14 +91,39 @@
       border-bottom-right-radius: 12px;
   }
 
+  /* Animations */
+  
+  @keyframes fade-left {
+    
+    0% {
+      opacity: 0;
+      transform: translateX(-10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fade-bottom {
+    
+    0% {
+      opacity: 0;
+      transform: translateY(10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 @layer components {
 
   /* Liens de navigations */
   .navlink {
-    @apply flex flex-col h-11 text-white text-sm font-semibold duration-200
-    hover:bg-black/5 hover:text-white/80;
+    @apply flex flex-col h-11 text-white text-sm duration-200
+    hover:bg-black/5 hover:text-white/80 font-open-sans;
   }
 
   /* Container box Styling */
@@ -95,10 +141,6 @@
       max-width: 100%;
       padding-right: 32px;
       padding-left: 30px;
-    }
-
-    .container {
-      width: 100%;
     }
   }
 
